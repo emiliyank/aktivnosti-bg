@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Box personal portfolio Template</title>
+    <title>Aktivnosti.bg</title>
     <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+  <!--   <link href="ionicons/css/ionicons.min.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
-
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
@@ -42,31 +42,28 @@
     <!-- end Preloader -->
 
     <div class="container-fluid">
-        <!-- box header -->
+        <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
                 <a href="index.html"><img src="img/logo.png" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Още</span><span class="box-menu-icon"></span>
             </a>
-            <!-- box-primary-nav-trigger -->
         </header>
-        <!-- end box header -->
+        <!-- end box-header -->
 
         <!-- nav -->
         <nav>
             <ul class="box-primary-nav">
                 <li class="box-label">About me</li>
 
-                <li><a href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="index.html">Intro</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="services.html">services</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="contact.html">contact me</a></li>
-
-
 
                 <li class="box-label">Follow me</li>
 
@@ -75,198 +72,197 @@
                 <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
                 <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
             </ul>
-        </nav>
+        </nav> 
         <!-- end nav -->
-
-        <!-- box-intro -->
-        <section class="box-intro">
-            <div class="table-cell">
-                <h1 class="box-headline letters rotate-2">
-                    <span class="box-words-wrapper">
-                        <b class="is-visible">design.</b>
-                        <b>&nbsp;coding.</b>
-                        <b>graphic.</b>
-                    </span>
-		        </h1>
-                <h5>everything you need to build your personal portfolio</h5>
-            </div>
-
-            <div class="mouse">
-                <div class="scroll"></div>
-            </div>
-        </section>
-        <!-- end box-intro -->
     </div>
 
-    <!-- portfolio div -->
-    <div class="portfolio-div">
-        <div class="portfolio">
-            <div class="no-padding portfolio_container">
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6  fashion logo">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/01.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mockups in seconds</span>
-                                    <em>Fashion / Logo</em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1 id="message">Търсиш<span>?</span><!-- <img src="img/logo_large.png" width="200" alt="Logo"> --></h1>
+        <p><a href="#">Приключенията във Враца са тук!</a></p>
+    </div>
+    
+    <!-- end top bar -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 ads graphics">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/03.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Floating mockups</span>
-                                    <em>Ads / Graphics</em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+    <!-- main container -->
+    <div class="main-container portfolio-inner clearfix">
+        <!-- portfolio div -->
+        <div class="portfolio-div">
+            <div class="portfolio">
+                <!-- portfolio_filter -->
+                <div class="categories-grid wow fadeInLeft">
+                    <nav class="categories text-center">
+                        <h4>Категории</h4>
+                        <ul class="portfolio_filter">
+                            <li><a href="" class="active" data-filter="*">Всички</a></li>
+                            <li><a href="" data-filter=".photography">Спорт</a></li>
+                            <li><a href="" data-filter=".logo">Обучение</a></li>
+                            <br id="new_row_1">
+                             <li><a href="" data-filter=".graphics">Танци</a></li>
+                            <li><a href="" data-filter=".graphics">Развлечения</a></li>
+                            <li><a href="" data-filter=".ads">Изкуство</a></li>
+                        </ul>
+                        <!--Slider-->
 
-                <!-- single work -->
-                <div class="col-md-6 col-sm-12 photography">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/02.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Photorealistic smartwatch</span>
-                                    <em>Photography</em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </nav>
                 </div>
-                <!-- end single work -->
+                <!-- portfolio_filter -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 fashion ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/04.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Held by hands</span>
-                                    <em>Fashion / Ads</em>
+                <!-- portfolio_container -->
+                <div class="no-padding portfolio_container clearfix">
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6  fashion logo">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/01.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Mockups in seconds</span>
+                                        <em>Fashion / Logo</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+                        </a>
+                    </div>
+                    <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/05.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 ads graphics">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/03.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Floating mockups</span>
+                                        <em>Ads / Graphics</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+                        </a>
+                    </div>
+                    <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-6 col-sm-12 photography">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/010.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Photorealistic smartwatch</span>
-                                    <em>Photography</em>
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-12 photography">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/02.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Photorealistic smartwatch</span>
+                                        <em>Photography</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+                        </a>
+                    </div>
+                    <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/06.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 fashion ads">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/04.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Held by hands</span>
+                                        <em>Fashion / Ads</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+                        </a>
+                    </div>
+                    <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/07.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 graphics ads">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/05.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Mobile devices</span>
+                                        <em>Graphics / Ads</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+                        </a>
+                    </div>
+                    <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/08.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-12 photography">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/010.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Photorealistic smartwatch</span>
+                                        <em>Photography</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+                        </a>
+                    </div>
+                    <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/portfolio/09.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 graphics ads">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/06.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Mobile devices</span>
+                                        <em>Graphics / Ads</em>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 graphics ads">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/07.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Mobile devices</span>
+                                        <em>Graphics / Ads</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 graphics ads">
+                        <a href="single-project.html" class="portfolio_item">
+                            <img src="img/portfolio/08.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Mobile devices</span>
+                                        <em>Graphics / Ads</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+
                 </div>
-                <!-- end single work -->
+                <!-- end portfolio_container -->
             </div>
-            <!-- end portfolio_container -->
+            <!-- portfolio -->
         </div>
-        <!-- portfolio -->
+        <!-- end portfolio div -->
     </div>
-    <!-- end portfolio div -->
+    <!-- end main container -->
+
 
     <!-- footer -->
     <footer>
@@ -279,6 +275,7 @@
     <!-- back to top -->
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
+
 
 
 
@@ -296,22 +293,74 @@
     
     <!-- google analytics  -->
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        // (function (i, s, o, g, r, a, m) {
+        //     i['GoogleAnalyticsObject'] = r;
+        //     i[r] = i[r] || function () {
+        //         (i[r].q = i[r].q || []).push(arguments)
+        //     }, i[r].l = 1 * new Date();
+        //     a = s.createElement(o),
+        //         m = s.getElementsByTagName(o)[0];
+        //     a.async = 1;
+        //     a.src = g;
+        //     m.parentNode.insertBefore(a, m)
+        // })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-76796224-1', 'auto');
-        ga('send', 'pageview');
+        // ga('create', 'UA-76796224-1', 'auto');
+        // ga('send', 'pageview');
+        
+        // Change Header
+        function nextMsg() {
+            if (messages.length == 0) {
+                //reload array
+                messages = [
+                "Търсиш<span>?</span>",
+                "Обучение<span>?</span>",
+                "Забавление<span>?</span>",
+                "Спорт<span>?</span>"
+                ].reverse();
+                nextMsg();
+            } else {
+            $('#message').html(messages.pop()).fadeIn(500).delay(6000).fadeOut(500,
+             function(){ 
+                //  $(this).css({background: "linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                // }).animate({opacity: 1},{duration:1000});
+
+                // $('.top-bar').css({transition: "background 1s ease-out" });
+                // 
+                // 
+                //  $('.top-bar').fadeTo('slow',0.3,function(){
+                //  $(this).css({background: "-webkit-linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                // }).fadeTo('slow',1);
+
+                //  $('.top-bar').fadeTo('slow',0.3,function(){
+                //  $(this).css({background: "linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                // }).fadeTo('slow',1);
+                
+                // $('.top-bar').stop().animate({opacity: 0},1000,function(){
+                //  $(this).css({background: "-webkit-linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                //  $(this).css({background: "linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                // }).animate({opacity: 1},{duration:1000});
+                
+              
+                
+                $('.top-bar').css({background: "-webkit-linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                $('.top-bar').css({background: "linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(img/img_header"+(messages.length)+".jpg)" });
+                nextMsg();
+                    })      
+                }//end of else
+            };//end of function
+            // list of messages to display
+            var messages = [
+                "Търсиш<span>?</span>",
+                "Обучение<span>?</span>",
+                "Забавление<span>?</span>",
+                "Спорт<span>?</span>"
+            ].reverse();
+            // initially hide the message
+            $('#message').hide();
+            // start animation
+            nextMsg();
     </script>
-
 </body>
 
 </html>
