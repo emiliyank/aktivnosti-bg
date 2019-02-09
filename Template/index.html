@@ -11,10 +11,15 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ionic icons-->
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- range slider -->
+    <link href="css/rangeslider.css" rel="stylesheet">
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
@@ -57,15 +62,12 @@
         <nav>
             <ul class="box-primary-nav">
                 <li class="box-label">About me</li>
-
                 <li><a href="index.html">Intro</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="services.html">services</a></li>
                 <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="contact.html">contact me</a></li>
-
                 <li class="box-label">Follow me</li>
-
                 <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
                 <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
                 <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
@@ -101,8 +103,21 @@
                             <li><a href="" data-filter=".art">Изкуство</a></li>
                         </ul>
                         <!--Slider-->
-
-                    </nav>
+                        <div class="range_fancybox-wrap">
+                        <div class="rangeslider-wrap">
+                            <input type="range" min="0" max="50" step="1" labels="Всички възрасти, 25 години, Пораснали">  
+                        </div>
+                        <div class="fancybox">
+                            <input type="checkbox" id="check" />
+                            <label for="check">
+                                <svg viewBox="0,0,50,50">
+                                    <path d="M5 30 L 20 45 L 45 5"></path>
+                                </svg>
+                            </label>
+                            <p class="">Безплатни</p>
+                        </div>  
+                        </div>  
+                     </nav>
                 </div>
                 <!-- portfolio_filter -->
 
@@ -292,7 +307,6 @@
     </div>
     <!-- end main container -->
 
-
     <!-- footer -->
     <footer>
         <div class="container-fluid">
@@ -305,17 +319,15 @@
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
 
-
-
-
     <!-- jQuery -->
     <script src="js/jquery-2.1.1.js"></script>
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script> -->
     <!--  plugins -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/animated-headline.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
-
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
@@ -338,7 +350,7 @@
         // ga('send', 'pageview');
     </script>
 
-     <!-- change top-bar h1 and background  -->
+     <!-- Change top-bar h1 and background script!!!  -->
     <script>
         function nextMsg() {
             var picture = 0;
@@ -382,6 +394,43 @@
             // start animation
             nextMsg();
     </script>
-</body>
 
+    <!-- Range Slider script -->
+    <script src="js/rangeslider.min.js"></script>
+    <script>
+       $('input[type="range"]').rangeslider({
+            polyfill: false,
+            // Default CSS classes
+            rangeClass: 'rangeslider',
+            disabledClass: 'rangeslider--disabled',
+            horizontalClass: 'rangeslider--horizontal',
+            fillClass: 'rangeslider__fill',
+            handleClass: 'rangeslider__handle',
+            // Callback function
+            onInit: function() {
+                $rangeEl = this.$range;
+            // add value label to handle
+                var $handle = $rangeEl.find('.rangeslider__handle');
+                var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
+                $handle.append(handleValue);
+            // get range index labels 
+                var rangeLabels = this.$element.attr('labels');
+                rangeLabels = rangeLabels.split(', ');
+            // add labels
+                $rangeEl.append('<div class="rangeslider__labels"></div>');
+                $(rangeLabels).each(function(index, value) {
+                $rangeEl.find('.rangeslider__labels').append('<span class="rangeslider__labels__label">' + value + '</span>');
+                })
+            },
+            // Callback function
+            onSlide: function(position, value) {
+                var $handle = this.$range.find('.rangeslider__handle__value');
+                $handle.text(this.value);
+            },
+            // Callback function
+            onSlideEnd: function(position, value) {}
+        });
+    </script>
+    
+</body>
 </html>

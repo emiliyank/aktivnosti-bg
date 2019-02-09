@@ -15,6 +15,8 @@
 	- Header -
     - box intro section -
     - Portfoilo section -
+    - Range Slider for Age
+    - Checkbox for Free/Paid
     - Footer -
     - About page -
     - Services page -
@@ -190,7 +192,7 @@ h5 {
     z-index: 3;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: #999scale;
 }
 
 .box-header {
@@ -363,7 +365,7 @@ h5 {
     font-size: 1.375rem;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: #999scale;
     margin: .2em 0;
     text-transform: capitalize;
 }
@@ -848,8 +850,192 @@ b i:last-child {
     padding-top: 55px;
 }
 
-/*Range slider
-=============================================*/
+/*Range slider (frontpage / select age)
+==================================================*/
+.range_fancybox-wrap{
+    width: 100%;
+    padding-bottom: 7%;
+    position: relative;
+}
+
+.rangeslider-wrap {
+  width: 30%;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding-right: 3%: 
+}
+
+.rangeslider {
+  position: relative;
+  height: 4px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #999;
+}
+
+.rangeslider__handle {
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #ffbf00;
+  touch-action: pan-y;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  z-index: 3;
+  top: -8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .5), inset 0 0 0 2px white;
+}
+
+.rangeslider__handle__value {
+  transition: background-color 0.2s, box-shadow 0.1s, transform 0.1s;
+  box-sizing: border-box;
+  width: 40px;
+  text-align: center;
+  padding: 2px;
+  background-color: #ffbf00;
+  border-radius: 4px;
+  color: white;
+  left: -1px;
+  top: -40px;
+  position: absolute;
+  white-space: nowrap;
+  border-top: 1px solid #999;
+  box-shadow: 0 -4px 1px rgba(0, 0, 0, .07), 0 -5px 20px rgba(0, 0, 0, .3);
+}
+
+.rangeslider__handle__value:before {
+  transition: border-top-color 0.2s;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 10px);
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid;
+  border-top-color: #ffbf00;
+}
+
+.rangeslider__handle__value:after {
+  content: " ";
+}
+.rangeslider__fill {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  background-color: #ffbf00 !important;
+  border-radius: 2px;
+}
+
+.rangeslider__labels {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rangeslider__labels__label {
+  font-size: 1.2rem !important;
+  position: relative;
+  padding-top: 7% !important;
+  color: #999;
+}
+
+.rangeslider__labels__label:first-child:before, .rangeslider__labels__label:last-child:before {
+  height: 12px;
+  width: 2px;
+}
+
+.rangeslider__labels__label:first-child:before {
+  background-color: #ffbf00;
+}
+
+.rangeslider__labels__label:last-child:before {
+  background-color: #999;
+}
+
+.rangeslider__labels__label:first-child {
+  transform: translateX(-48%);
+}
+
+.rangeslider__labels__label:last-child {
+  transform: translateX(48%);
+}
+
+.rangeslider.rangeslider--active .rangeslider__handle, .rangeslider.rangeslider--active .rangeslider__handle * {
+  background-color: #ffbf00;
+}
+
+.rangeslider.rangeslider--active .rangeslider__handle *:before {
+  border-top-color: #ffbf00;
+}
+
+.rangeslider.rangeslider--active .rangeslider__handle__value {
+  transform: translateY(-5px);
+  box-shadow: 0 -3px 2px rgba(0, 0, 0, .04), 0 -9px 25px rgba(0, 0, 0, .15);
+}
+
+/* Checkbox (front page paid/free)
+================================================*/
+.fancybox{
+    display: inline-block;
+    position: absolute;
+    top: -6%;
+    right: 18%; 
+    width: 10%;
+    text-align: left;
+}
+
+.fancybox p{
+    display: block;
+    position: relative;
+    font-size: 1.2rem;
+    
+}
+
+#check {
+  position: relative;
+  opacity: 0;
+}
+#check:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+#check:focus + label {
+  transform: scale(1.03);
+}
+#check + label {
+  display: inline-block;
+  border: 2px solid #F5B700;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#check + label:active {
+  transform: scale(1.05);
+  border-radius: 30px;
+}
+#check + label svg {
+  pointer-events: none;
+}
+#check + label svg path {
+  fill: none;
+  stroke: #F5B700;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 350ms cubic-bezier(1, 0, 0.37, 0.91);
+}
+
 
 
 /* footer
@@ -1125,9 +1311,6 @@ textarea:focus {
     color: #fff;
 }
 
-
-
-
 /* single project page
 ==================================================*/
 .text-uppercase{
@@ -1198,6 +1381,7 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
   color: black;
 }
+
 /*=============================
 multi slider respon
 =============================*/
@@ -1316,6 +1500,7 @@ multi slider respon
     height: 19em;
   }
 }
+
 /* Responsive media queries
 ==================================================*/
 @media (max-width: 1105px) {
@@ -1339,6 +1524,24 @@ multi slider respon
     .col-md-6 h3 {
         margin-top: 30px;
     }
+
+    .rangeslider-wrap {
+    margin-bottom: 10% !important;
+    }
+
+    .rangeslider__labels__label {
+    padding-top: 11% !important;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    
+
+    .rangeslider-wrap {
+    margin-bottom: 15%;
+    }
+
+
 }
 
 @media only screen and (max-width: 670px) {
@@ -1362,9 +1565,29 @@ multi slider respon
         font-size: 40px;
         line-height: 30px;
     }
-  /*  .portfolio .categories-grid .categories ul li {
-        float: none;
-    }*/
+
+    .rangeslider-wrap {
+    margin-bottom: 15%;
+    }
+ 
+     .rangeslider-wrap {
+    margin-bottom: 20%;
+    }
+
+    .rangeslider__labels__label {
+    font-size: 1rem !important;
+    padding-top: 13% !important;
+  
+    }
+
+    #check + label {
+    width: 30px;
+    height: 30px;
+    }
+
+    .fancybox p{
+    font-size: 1rem;  
+    }
 
 }
 
@@ -1375,6 +1598,21 @@ multi slider respon
      #new_row_1{
         display: none;
     } 
+
+    .rangeslider__labels__label {
+    font-size: 0.9rem !important;
+    padding-top: 14% !important;
+  
+    }
+
+    .fancybox p{
+    font-size: 0.9rem;  
+    }
+
+    #check + label {
+    width: 28px;
+    height: 28px;
+    }
 }
 
 @media only screen and (max-width: 520px) {
@@ -1387,10 +1625,20 @@ multi slider respon
     .main-container {
         padding: 50px 0;
     }
+
+    .fancybox{
+    position: absolute;
+    right: 14%; 
+    }
+
+    #check + label {
+    width: 22px;
+    height: 22px;
+    }
         
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 422px) {
     .box-headline {
         font-size: 50px;
     }
@@ -1400,5 +1648,23 @@ multi slider respon
     .top-bar h1 {
         font-size: 30px;
         line-height: 30px;
+    }
+
+    .rangeslider__labels__label {
+    padding-top: 18% !important;
+    }
+
+    .fancybox{
+    position: absolute;
+    top: -38%;
+    left: 2%; 
+    }
+    
+   
+    #check + label {
+    width: 22px;
+    height: 22px;
+    top: 0px;
+    
     }
 }
