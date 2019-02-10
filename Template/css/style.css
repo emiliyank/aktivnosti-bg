@@ -54,7 +54,9 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
-
+.my-content{
+	padding:0 20px;
+}
 .main-container {
     padding: 100px 15px;
 }
@@ -189,7 +191,7 @@ h5 {
     background: rgba(255, 255, 255, 0.95);
     height: 50px;
     width: 100%;
-    z-index: 3;
+    z-index: 6;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: #999scale;
@@ -312,7 +314,7 @@ h5 {
 }
 
 .box-primary-nav-trigger {
-    width: 100px;
+    width: 170px;
     padding-left: 1em;
     background-color: transparent;
     height: 30px;
@@ -342,7 +344,7 @@ h5 {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.96);
-    z-index: 2;
+    z-index: 5;
     text-align: center;
     padding: 50px 0;
     -webkit-backface-visibility: hidden;
@@ -427,7 +429,198 @@ h5 {
 }
 
 
+/* SUBCRIBE FORM ===========*/
+section {
+    text-align: center;
+}
+select.frecuency {
+    border: none;
+    font-style: italic;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform .35s ease-in;
+    transition: -webkit-transform .35s ease-in;
+    border-bottom: none;
+}
+select.frecuency:focus {
+    outline: none;
+    border-bottom: 5px solid #22313F;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-transition: -webkit-transform .35s ease-in;
+    transition: -webkit-transform .35s ease-in;
+}
+.well{
+	background: #575b5b;
+	border: none;
+}
+.well h3{
+	color: #fff;
+}
+.free {
+    text-transform: uppercase;
+}
+.input-group {
+    margin: 20px auto;
+    width: 100%;
+}
+input.btn.btn-lg {
+    width: 60%;
+    height: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+button.btn {
+    width: 40%;
+    height: 60px;
+	background-color:#ffbf00;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+button.btn:hover {
+	background-color:#ffc61b;
+}
+.promise {
+    color: #999;
+}
+/*range slider subscribe*/
+.input-group .range_fancybox-wrap{
+	width: 60%;
+	padding: 50px 0 20px 0;
+	margin: 0 auto;
+	
+}
+.input-group .range_fancybox-wrap .rangeslider-wrap{
+	width:100%;
+}
+.input-group .range_fancybox-wrap .rangeslider-wrap .rangeslider__labels__label{
+	color: #fff;
+}
+/*checkboxes*/
+.nopsi-checkbox-container
+{
+  
+  width: 60%;
+  margin:20px auto;
+}
 
+
+.nopsi-checkbox
+{
+  width: 100%;
+  height: 30px;
+  position: relative;
+  float: left;
+  background-color:#fff;
+  border-radius:15px;
+  margin-bottom:10px;
+}
+
+.nopsi-checkbox-text
+{
+  width: calc(100% - 70px);
+  position: relative;
+  float: left;
+  padding-left: 10px;
+  color: #878787;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 30px;
+  height: 30px;
+  font-weight: 100;
+}
+
+.nopsi-checkbox-tool
+{
+  width: 60px;
+  height: 30px;
+  position: relative;
+  float: left;
+  border-radius: 15px;
+  background-color: #c0c2c6;
+  z-index: 505;
+}
+
+.nopsi-checkbox-tool-chk
+{
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  border-radius: 15px;
+  opacity: 0;
+  z-index: 512;
+  cursor:pointer;
+}
+
+.nopsi-checkbox-tool-ball
+{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000;
+  z-index: 510;
+  margin: 1px;
+  transition: .5s ease;
+}
+
+.nopsi-checkbox-tool-lin-up
+{
+  width: 15px;
+  height: 3px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  top:14px;
+  z-index: 511;
+  left: 7px;
+  background-color:white;
+  transition: .5s ease;
+  border-radius: 1px;
+}
+
+.nopsi-checkbox-tool-lin-down
+{
+  width: 15px;
+  height: 3px;
+  position: absolute;
+  transform: rotateZ(135deg);
+  top:14px;
+  z-index: 511;
+  left: 7px;
+  background-color:white;
+  transition: .5s ease;
+  border-radius: 1px;
+}
+
+.nopsi-checkbox-tool  input:checked ~ .nopsi-checkbox-tool-ball
+{
+  margin-left: 31px;
+  background-color: #ffbf00;
+}
+
+.nopsi-checkbox-tool  input:checked ~ .nopsi-checkbox-tool-lin-up
+{
+  margin-left: 30px;
+  width: 15px;
+  height: 3px;
+  transform: rotateZ(135deg);
+  top:13px;
+  left: 10px;
+}
+
+.nopsi-checkbox-tool  input:checked ~ .nopsi-checkbox-tool-lin-down
+{
+  margin-left: 30px;
+  width: 7px;
+  height: 3px;
+  transform: rotateZ(45deg);
+  top:16px;
+  left: 8px;
+}
 
 /* box-intro
 ==================================================*/
@@ -1142,7 +1335,10 @@ footer img {
     color: #555;
     text-decoration: none;
 }
-
+.gradient{
+	background:red;
+	height:100px;
+}
 .social-ul {
     list-style: none;
     display: inline-block;
@@ -1315,6 +1511,12 @@ textarea:focus {
 ==================================================*/
 .text-uppercase{
 	margin: 0;
+}
+.main-container {
+    padding: 100px 0px;
+}
+.single-project{
+	padding:50px 0 50px 0;
 }
 .org span{
 	color: #33bada;
