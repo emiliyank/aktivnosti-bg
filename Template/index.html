@@ -11,10 +11,15 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ionic icons-->
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- range slider -->
+    <link href="css/rangeslider.css" rel="stylesheet">
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
@@ -48,31 +53,102 @@
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Още</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Абонирай се</span><span class="box-menu-icon"></span>
             </a>
         </header>
         <!-- end box-header -->
 
-        <!-- nav -->
+        <!-- sunscribe nav menu -->
         <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label">About me</li>
-
-                <li><a href="index.html">Intro</a></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="services.html">services</a></li>
-                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">contact me</a></li>
-
-                <li class="box-label">Follow me</li>
-
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
-            </ul>
-        </nav> 
-        <!-- end nav -->
+            <div class="box-primary-nav">
+                <section>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<div class="well">
+									<h3>Абонирайте се за нашите предложения</h3>
+									<form action="#">
+										<div class="input-group">
+											<input class="btn btn-lg" name="email" id="email" type="email" placeholder="Вашия имейл" required>
+											<button class="btn btn-info btn-lg" type="submit">Изпрати</button>
+											<div class="range_fancybox-wrap">
+												<div class="rangeslider-wrap">
+													<input type="range" min="0" max="50" step="1" value="0" labels="Всички възрасти, 25 години, Пораснали">  
+												</div>
+						
+											</div>  
+											<div class="nopsi-checkbox-container">
+											
+												<div class="nopsi-checkbox">
+													<div class="nopsi-checkbox-text">
+														Спорт
+													</div>
+													<div class="nopsi-checkbox-tool">
+														<input class="nopsi-checkbox-tool-chk" checked="checked" type="checkbox">
+														<div class="nopsi-checkbox-tool-ball"></div>
+														<div class="nopsi-checkbox-tool-lin-up"></div>
+														<div class="nopsi-checkbox-tool-lin-down"></div>
+													</div>
+												</div>
+  
+												<div class="nopsi-checkbox">
+													<div class="nopsi-checkbox-text">
+														Обучение
+													</div>
+													<div class="nopsi-checkbox-tool">
+														<input class="nopsi-checkbox-tool-chk" checked="checked" type="checkbox">
+														<div class="nopsi-checkbox-tool-ball"></div>
+														<div class="nopsi-checkbox-tool-lin-up"></div>
+														<div class="nopsi-checkbox-tool-lin-down"></div>
+													</div>
+												</div>
+												  
+												<div class="nopsi-checkbox">
+													<div class="nopsi-checkbox-text">
+														Танци
+													</div>
+													<div class="nopsi-checkbox-tool">
+														<input class="nopsi-checkbox-tool-chk" checked="checked" type="checkbox">
+														<div class="nopsi-checkbox-tool-ball"></div>
+														<div class="nopsi-checkbox-tool-lin-up"></div>
+														<div class="nopsi-checkbox-tool-lin-down"></div>
+													</div>
+												</div>
+  
+												<div class="nopsi-checkbox">
+													<div class="nopsi-checkbox-text">
+														Изкуство
+													</div>
+													<div class="nopsi-checkbox-tool">
+														<input class="nopsi-checkbox-tool-chk" checked="checked" type="checkbox">
+														<div class="nopsi-checkbox-tool-ball"></div>
+														<div class="nopsi-checkbox-tool-lin-up"></div>
+														<div class="nopsi-checkbox-tool-lin-down"></div>
+													</div>
+												</div>
+  
+												<div class="nopsi-checkbox">
+													<div class="nopsi-checkbox-text">
+														Развлечение
+													</div>
+													<div class="nopsi-checkbox-tool">
+														<input class="nopsi-checkbox-tool-chk" checked="checked" type="checkbox">
+														<div class="nopsi-checkbox-tool-ball"></div>
+														<div class="nopsi-checkbox-tool-lin-up"></div>
+														<div class="nopsi-checkbox-tool-lin-down"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+            </div>
+        </nav>
+        <!--end sunscribe nav menu-->
     </div>
 
     <!-- top bar -->
@@ -101,12 +177,26 @@
                             <li><a href="" data-filter=".art">Изкуство</a></li>
                         </ul>
                         <!--Slider-->
-
-                    </nav>
+                        <div class="range_fancybox-wrap">
+							<div class="rangeslider-wrap">
+								<input type="range" min="0" max="50" step="1" value="0" labels="Всички възрасти, 25 години, Пораснали">  
+							</div>
+							<div class="fancybox">
+								<input type="checkbox" id="check"/>
+								<label for="check">
+									<svg viewBox="0,0,50,50">
+										<path d="M5 30 L 20 45 L 45 5"></path>
+									</svg>
+								</label>
+								<p class="">Безплатни</p>
+							</div>  
+                        </div>  
+                     </nav>
                 </div>
                 <!-- portfolio_filter -->
 
                 <!-- portfolio_container -->
+				<div class="my-content">
                 <div class="no-padding portfolio_container clearfix">
                     <!-- single work -->
                     <div class="col-md-3 col-sm-6 learning">
@@ -284,6 +374,7 @@
                     </div>
                     <!-- end single work -->
                 </div>
+				</div>
                 <!-- end portfolio_container -->
             </div>
             <!-- portfolio -->
@@ -292,11 +383,10 @@
     </div>
     <!-- end main container -->
 
-
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            <p class="copyright">© Box Portfolio 2016</p>
+            <p class="copyright">© Aktivnosti-bg 2019</p>
         </div>
     </footer>
     <!-- end footer -->
@@ -305,17 +395,15 @@
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
 
-
-
-
     <!-- jQuery -->
     <script src="js/jquery-2.1.1.js"></script>
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script> -->
     <!--  plugins -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/animated-headline.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
-
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
@@ -338,7 +426,7 @@
         // ga('send', 'pageview');
     </script>
 
-     <!-- change top-bar h1 and background  -->
+     <!-- Change top-bar h1 and background script!!!  -->
     <script>
         function nextMsg() {
             var picture = 0;
@@ -382,6 +470,43 @@
             // start animation
             nextMsg();
     </script>
-</body>
 
+    <!-- Range Slider script -->
+    <script src="js/rangeslider.min.js"></script>
+    <script>
+       $('input[type="range"]').rangeslider({
+            polyfill: false,
+            // Default CSS classes
+            rangeClass: 'rangeslider',
+            disabledClass: 'rangeslider--disabled',
+            horizontalClass: 'rangeslider--horizontal',
+            fillClass: 'rangeslider__fill',
+            handleClass: 'rangeslider__handle',
+            // Callback function
+            onInit: function() {
+                $rangeEl = this.$range;
+            // add value label to handle
+                var $handle = $rangeEl.find('.rangeslider__handle');
+                var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
+                $handle.append(handleValue);
+            // get range index labels 
+                var rangeLabels = this.$element.attr('labels');
+                rangeLabels = rangeLabels.split(', ');
+            // add labels
+                $rangeEl.append('<div class="rangeslider__labels"></div>');
+                $(rangeLabels).each(function(index, value) {
+                $rangeEl.find('.rangeslider__labels').append('<span class="rangeslider__labels__label">' + value + '</span>');
+                })
+            },
+            // Callback function
+            onSlide: function(position, value) {
+                var $handle = this.$range.find('.rangeslider__handle__value');
+                $handle.text(this.value);
+            },
+            // Callback function
+            onSlideEnd: function(position, value) {}
+        });
+    </script>
+    
+</body>
 </html>
